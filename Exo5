@@ -1,0 +1,20 @@
+package Exo5;
+
+import java.util.*;
+
+public class NbComprisEntre1a3
+{
+    public static void main(String[] Args)
+    {
+        int nb;
+        System.out.print("Donner un entier compris entre 1 et 3: ");
+        Scanner Grey = new Scanner(System.in);
+        nb = Grey.nextInt();
+        while (nb < 1 || nb > 3)
+        {
+            System.out.println("Erreur: Donnez un nombre compris entre 1 et 3");
+            nb = Grey.nextInt();
+        }
+        System.out.println("Felicitation vous avez donner un nombre compris entre 1 et 3.");
+    }
+}
