@@ -1,0 +1,33 @@
+package Exo4;
+
+import java.util.*;
+public class equation
+{
+    public static void main(String[] Args)
+    {
+        int a, b, c;
+        double delta, x1, x2;
+        System.out.println("Donnez les trois(3) coefficient de votre equation");
+        Scanner grey = new Scanner(System.in);
+        a = grey.nextInt();
+        b = grey.nextInt();
+        c = grey.nextInt();
+
+        delta = b*b -(4*a*c);
+        if(delta>0)
+        {
+            x1 = (-b -Math.sqrt(delta)) / (2 * a);
+            x2 = (-b +Math.sqrt(delta)) / (2 * a);
+            System.out.println("Les solutions sont x1 = " +x1+ "et X2: "+x2);
+        }
+        else if(delta==0)
+        {
+            x1 = -b / (2*a);
+            System.out.println("X1 = X2 = "+x1);
+        }
+        else
+        {
+           System.out.println("L'equation n'a pas de solution.");
+        }
+    }
+}
