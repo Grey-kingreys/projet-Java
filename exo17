@@ -1,0 +1,124 @@
+package Exo17;
+import java.util.*;
+public class FonctionMultiple
+{
+    public static void main(String[] Args)
+    {
+        Scanner Grey = new  Scanner(System.in);
+        int choix;
+        System.out.println("Faites votre choix sur le programme que vous voulez essayez: ");
+        System.out.println("1) Calcul de la sommme des N premiers nombres entiers;\n2)Rechercher le minimum" +
+                "et le maximum dans un ensembles des N nombres;\n3)Calculer le produit et le quotient de deux nombre" +
+                "utiliser l'operateur de division;\n4)Calculer le produit de deux nombre en utilisant seuleument l'operateur'+'" +
+                "\n5)Determiner si A et divisible par B. A et B etant des entiers positifs;\n6)Determiner tout les diviseur " +
+                "d'un entier X donne;\n7)Determiner si entier X est premier ou pas;\n8)Calculer la somme des" +
+                "chiffres qui compose un nombre entier naturel N;");
+        choix = Grey.nextInt();
+        switch (choix)
+        {
+            case 1:
+                int somme = 0;
+                int N;
+                System.out.print("Donnez un entier: ");
+                N = Grey.nextInt();
+                somme = N * (N + 1) / 2;
+                System.out.println("La somme des N premiers entier est: " + somme);
+                break;
+            case 2:
+                int a, b, c, min, max;
+                System.out.println("Donnez trois entier: ");
+                a = Grey.nextInt();
+                b = Grey.nextInt();
+                c = Grey.nextInt();
+                if(a > b)
+                {
+                    if(a > c)
+                    {
+                        max = a;
+                        if(b > c)
+                            min = c;
+                        else
+                            min = b;
+                    }
+                    else
+                    {
+                        max = c;
+                        min = b;
+
+                    }
+                }
+                else
+                {
+                    if(b > c)
+                    {
+                        max = b;
+                        min = a;
+
+                    }
+                    else
+                    {
+                        max = c;
+                        if(b > a)
+                            min = a;
+                        else
+                            min = b;
+                    }
+
+                }
+                System.out.println("Le maximum est: "+max+ " et le mimimum est: "+min);
+                break;
+            case 3:
+                int A, B, r;
+                double q=0;
+                System.out.println("Donnez le dividant puis le diviseur: ");
+                A = Grey.nextInt();
+                B = Grey.nextInt();
+                r = A%B;
+                while (r >= B) {
+                    r -= B;
+                    q= q+1;
+                }
+
+                System.out.println("Quotient : " + q);
+                System.out.println("Reste : " + r);
+                break;
+            case 4:
+                int M, P, Produit = 0;
+                int produit = 0;
+                System.out.println("Donnez les 2 nombres a multiplier: ");
+                M = Grey.nextInt();
+                P = Grey.nextInt();
+
+                for (int i = 0; i < P; i++) {
+                    produit += M;
+                }
+                System.out.println("Le produit de ces deux nombre est: "+produit);
+                break;
+            case 5:
+                int divA, divB;
+                System.out.println("Donnez le dividant puis le diviseur: ");
+                divA = Grey.nextInt();
+                divB = Grey.nextInt();
+
+                if(divA % divB == 0)
+                    System.out.println(divA+" est divisble par "+divB);
+                else
+                    System.out.println(divA+"ne pas divisible par "+divB);
+                break;
+            case 6:
+                int X = 10;
+                System.out.print("Diviseurs de " + X + " : ");
+
+                for (int i = 1; i <= X; i++) {
+                    if (X % i == 0) {
+                        System.out.print(i + " ");
+                    }
+                }
+
+                System.out.println();
+                
+        }
+
+    }
+
+}
