@@ -1,0 +1,24 @@
+package Exo3;
+import java.util.*;
+public class jour
+{
+    public static void main(String[] Args)
+    {
+        int jour = 0;
+        System.out.print("Donner un nombe correspondant a un jour de la semaine donc de 1 a 7: ");
+        Scanner unjour = new Scanner(System.in);
+        jour = unjour.nextInt();
+        switch (jour)
+        {
+            case 1: System.out.println("Lundi"); break;
+            case 2: System.out.println("Mardi"); break;
+            case 3: System.out.println("Mercredi"); break;
+            case 4: System.out.println("Jeudi"); break;
+            case 5: System.out.println("Vendredi"); break;
+            case 6: System.out.println("Samedi"); break;
+            case 7: System.out.println("Dimanche"); break;
+            default: System.out.println("Erreur: Nombre non compris entre 1 a 7");
+        }
+
+    }
+}
